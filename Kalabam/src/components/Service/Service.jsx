@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Service.scss";
 
 const Service = () => {
+    const [hoveredIndex, setHoveredIndex] = useState(null);
+
     const serviceItems = [
         {
             color: "#0d547d",
@@ -28,6 +30,7 @@ const Service = () => {
             desc: "Relish the divine prasadam prepared with devotion and care.",
         },
     ];
+
     return (
         <div id="service" className="service">
             <div className="shape-2"></div>
@@ -35,7 +38,7 @@ const Service = () => {
                 <div className="row service_row">
                     <div className="service_title">
                         <h3>
-                            <i class="bx bx-cog"></i>Services
+                            <i className="bx bx-cog"></i>Services
                         </h3>
                         <h4>
                             Experience the Divine <span>Through Our Services</span>
@@ -43,10 +46,20 @@ const Service = () => {
                     </div>
                     <div className="row service_items">
                         {serviceItems.map((item, index) => (
-                            <div  key={index} className="col-xl-3 col-lg-3 col-md-12 item1">
-                                <div className="card">
+                            <div
+                                key={index}
+                                className="col-xl-3 col-lg-3 col-md-12 item1"
+                                onMouseEnter={() => setHoveredIndex(index)}
+                                onMouseLeave={() => setHoveredIndex(null)}
+                            >
+                                <div
+                                    className="card"
+                                    style={{
+                                        backgroundColor: hoveredIndex === index ? item.color : "var(--bg-color)",
+                                    }}
+                                >
                                     <div className="icon" style={{ backgroundColor: item.color }}>
-                                        <i class={item.icon}></i>
+                                        <i className={item.icon}></i>
                                     </div>
                                     <div className="content">
                                         <h5>{item.title}</h5>
