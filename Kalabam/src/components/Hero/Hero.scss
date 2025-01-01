@@ -89,7 +89,7 @@
         width: 100%;
         background-color: transparent;
         position: relative;
-        // z-index: 2;
+
 
         &::after {
             position: absolute;
@@ -123,6 +123,13 @@
 
                     h3 {
                         font-size: 30px;
+                    }
+
+                    .hero_buttons {
+                        .book_now, .contact_us {
+                            font-size: 10px;
+                            padding: 8px 16px;
+                        }
                     }
                     
                 }
