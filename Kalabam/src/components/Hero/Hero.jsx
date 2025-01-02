@@ -17,7 +17,7 @@ const Hero = () => {
                             </p>
                             <div className="hero_buttons">
                                 <a href=""><button className="book_now">Book Now</button></a>
-                                <a href=""><button className="contact_us">Contact Us</button></a>
+                                <a href="#contact"><button className="contact_us">Contact Us</button></a>
                             </div>
                         </div>
                     </div>

@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar/NavBar";
 import About from "../components/About/About";
 import Service from "../components/Service/Service";
 import Contact from "../components/Contact/Contact";
+import Footer from "../components/Footer/Footer";
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <About />
             <Service />
             <Contact/>
+            <Footer/>
         </>
     );
 };
