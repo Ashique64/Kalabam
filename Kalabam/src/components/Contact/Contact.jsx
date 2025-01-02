@@ -1,7 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.scss";
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+    });
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const { name, email, phone, message } = formData;
+
+
+        const whatsappMessage = `Hello, I am ${name}.\n\nHere are my details:\n\n- Phone: ${phone}\n${
+            email ? `- Email: ${email}\n` : ""
+        }${message ? `- Message: ${message}` : ""}`;
+
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+
+        const phoneNumber = "918089682533";
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+        window.open(whatsappURL, "_blank");
+
+        setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+        });
+    };
+
     return (
         <div id="contact" className="contact">
             <div className="container">
@@ -22,18 +58,44 @@ const Contact = () => {
                     </div>
                     <div className="col-xl-6 col-lg-6 col-md-12 item2">
                         <div className="form_section">
-                            <form>
+                            <form onSubmit={handleSubmit}>
                                 <div className="form-group">
-                                    <input type="text" required placeholder="Name" />
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleInputChange}
+                                        required
+                                        placeholder="Name"
+                                    />
                                 </div>
                                 <div className="form-group">
-                                    <input type="email" placeholder="Email(Optional)" />
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleInputChange}
+                                        placeholder="Email (Optional)"
+                                    />
                                 </div>
                                 <div className="form-group">
-                                    <input type="text" required placeholder="Phone" />
+                                    <input
+                                        type="text"
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleInputChange}
+                                        required
+                                        placeholder="Phone"
+                                    />
                                 </div>
                                 <div className="form-group">
-                                    <textarea rows={3} placeholder="Message(Optional)"></textarea>
+                                    <textarea
+                                        rows={3}
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleInputChange}
+                                        placeholder="Message (Optional)"
+                                    ></textarea>
                                 </div>
                                 <div className="form-group">
                                     <button type="submit">Get In Touch</button>
