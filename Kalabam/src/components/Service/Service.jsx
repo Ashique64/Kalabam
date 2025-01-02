@@ -71,6 +71,7 @@ const Service = () => {
                     </div>
                 </div>
             </div>
+            <div className="shape-1"></div>
         </div>
     );
 };
