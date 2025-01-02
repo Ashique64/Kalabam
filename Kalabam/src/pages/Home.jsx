@@ -5,6 +5,8 @@ import About from "../components/About/About";
 import Service from "../components/Service/Service";
 import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
+import WhatsappButton from "../components/WhatsappButton/WhatsappButton";
+import ScrollToTopButton from "../components/ScrollToTopButton/ScrollToTopButton";
 
 const Home = () => {
     return (
@@ -15,6 +17,9 @@ const Home = () => {
             <Service />
             <Contact/>
             <Footer/>
+            <WhatsappButton/>
+            <ScrollToTopButton/>
+            
         </>
     );
 };
