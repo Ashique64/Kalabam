@@ -28,7 +28,7 @@ const NavBar = ({ page }) => {
         <div className={`navbars ${isSticky ? "sticky" : ""} ${page === "about" ? "blue-bg" : ""}`}>
             <div className="container-fluid">
                 <div className="row nav_row">
-                    <div className="col-xl-2 col-lg-2 col-6 nav_col1">
+                    <div className="col-xl-3 col-lg-2 col-6 nav_col1">
                         <div className="logo">
                             <a href="">
                                 LOGO
@@ -50,23 +50,19 @@ const NavBar = ({ page }) => {
                                     <a href="#service">service</a>
                                 </li>
                                 <li>
-                                    <a href="">privacy policy</a>
+                                    <a href="#contact">Contact</a>
                                 </li>
                                 <i className={menuIcon ? "bx bx-x" : ""} onClick={handleMenuIcon}></i>
                             </ul>
                         </div>
                     </div>
-                    <div className="col-xl-4 col-lg-2 col-6  nav_col3">
+                    <div className="col-xl-3 col-lg-2 col-6  nav_col3">
                         <div className="items">
-                            <div className="call_us">
-                                <i className="bx bxs-phone-call"></i>
-                                <p>+91 1234567890</p>
-                            </div>
-                            <div className="nav_button">
+                            {/* <div className="nav_button">
                                 <a href="#service">
                                     <button>get started</button>
                                 </a>
-                            </div>
+                            </div> */}
                             <div className="mobile_icon" onClick={handleMenuIcon}>
                                 <i className={menuIcon ? "" : "bx bx-menu"}></i>
                             </div>

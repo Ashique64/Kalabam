@@ -96,6 +96,13 @@
                                 background-color: var(--text-color2);
                                 color: var(--primary-color);
                                 border: none;
+                                outline: 2px solid var(--text-color2);
+                                transition: 0.3s ease-in-out;
+
+                                &:hover {
+                                    background-color: transparent;
+                                    color: var(--text-color2);
+                                }
                             }
                         }
                     }

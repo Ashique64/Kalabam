@@ -9,7 +9,7 @@ import Footer from "../components/Footer/Footer";
 const Home = () => {
     return (
         <>
-            {/* <NavBar /> */}
+            <NavBar />
             <Hero />
             <About />
             <Service />

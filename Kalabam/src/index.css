@@ -24,6 +24,11 @@ body {
     line-height: 26px;
 }
 
+::selection {
+  background-color: var(--bg-color);
+  color: var(--text-color2);
+}
+
 a {
     text-decoration: none;
     transition: 0.3s;

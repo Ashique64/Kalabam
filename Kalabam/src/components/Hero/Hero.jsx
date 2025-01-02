@@ -16,7 +16,7 @@ const Hero = () => {
                                 consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             </p>
                             <div className="hero_buttons">
-                                <a href=""><button className="book_now">Book Now</button></a>
+                                <a href="#contact"><button className="book_now">Book Now</button></a>
                                 <a href="#contact"><button className="contact_us">Contact Us</button></a>
                             </div>
                         </div>

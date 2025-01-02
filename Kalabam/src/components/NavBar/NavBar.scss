@@ -1,6 +1,6 @@
 .navbars {
     padding: 0 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    border-bottom: 1px solid var(--bg-color);
     position: fixed;
     top: 0;
     width: 100%;
@@ -9,11 +9,12 @@
     transition: background-color 0.3s ease;
 
     &.sticky {
-        background-color: white;
+        // background-color: var(--text-color2);
+        background-color: var(--bg-color);
     }
 
     &.blue-bg {
-        background-color: white;
+        background-color: var(--bg-color);
         position: relative;
     }
 
@@ -52,7 +53,7 @@
                             display: inline-block;
 
                             a {
-                                color: var(--primary-color);
+                                color: var(--text-color2);
                                 font-weight: 600;
                                 font-size: 15px;
                                 line-height: 16px;
@@ -69,7 +70,7 @@
                                     content: "";
                                     width: 0%;
                                     height: 4px;
-                                    background-color: #00abf0;
+                                    background-color: var(--primary-color);
                                     position: absolute;
                                     bottom: 0px;
                                     left: 0px;
@@ -100,45 +101,28 @@
                     align-items: center;
                     justify-content: space-between;
 
-                    .call_us {
-                        display: flex;
-                        align-items: center;
-                        i {
-                            color: var(--primary-color);
-                            font-weight: 600;
-                            font-size: 18px;
-                            margin: 0 7px;
-                        }
-                        p {
-                            color: var(--primary-color);
-                            font-weight: 600;
-                            font-size: 15px;
-                            margin-bottom: 0;
-                        }
-                    }
+                    // .nav_button {
+                    //     button {
+                    //         font-size: 15px;
+                    //         height: 55px;
+                    //         line-height: 55px;
+                    //         padding: 0 35px;
+                    //         display: inline-block;
+                    //         font-weight: 700;
+                    //         color: var(--primary-color);
+                    //         background: var(--primary-color);
+                    //         text-align: center;
+                    //         position: relative;
+                    //         overflow: hidden;
+                    //         border-radius: 90px;
+                    //         text-transform: uppercase;
+                    //         transition: 0.3s ease-in-out;
 
-                    .nav_button {
-                        button {
-                            font-size: 15px;
-                            height: 55px;
-                            line-height: 55px;
-                            padding: 0 35px;
-                            display: inline-block;
-                            font-weight: 700;
-                            color: var(--primary-color);
-                            background: var(--primary-color);
-                            text-align: center;
-                            position: relative;
-                            overflow: hidden;
-                            border-radius: 90px;
-                            text-transform: uppercase;
-                            transition: 0.3s ease-in-out;
-
-                            &:hover {
-                                background: white;
-                            }
-                        }
-                    }
+                    //         &:hover {
+                    //             background: white;
+                    //         }
+                    //     }
+                    // }
 
                     .mobile_icon {
                         display: none;
@@ -170,8 +154,8 @@
                             height: 100vh;
                             min-width: 300px;
                             padding: 40px;
-                            background-color: var(--tp-common-black);
-                            background-image: url("/images/slider/slider-shape-3-1.png");
+                            background-color: var(--bg-color);
+                            background-image: url("/images/slider-shape-3-1.png");
                             background-position: center;
                             background-size: cover;
                             background-repeat: no-repeat;
@@ -187,7 +171,7 @@
                                 height: 45px;
                                 line-height: 45px;
                                 width: 50px;
-                                color: var(--tp-common-white);
+                                color: var(--text-color2);
                                 display: inline-block;
                                 text-align: center;
                                 border-radius: 10px;
@@ -204,7 +188,7 @@
                                         display: none;
                                     }
                                     &:hover {
-                                        color: var(--tp-theme-1);
+                                        color: var(--primary-color);
                                         transition: 0.4s ease-in-out;
                                     }
                                 }
@@ -245,8 +229,8 @@
                                 height: 45px;
                                 line-height: 45px;
                                 width: 50px;
-                                background-color: var(--tp-theme-1);
-                                color: var(--tp-common-white);
+                                background-color: var(--text-color2);
+                                color: var(--bg-color);
                                 display: inline-block;
                                 text-align: center;
                                 border-radius: 10px;
@@ -282,8 +266,8 @@
                             height: 100vh;
                             min-width: 300px;
                             padding: 40px;
-                            background-color: var(--tp-common-black);
-                            background-image: url("/images/slider/slider-shape-3-1.png");
+                            background-color: var(--bg-color);
+                            background-image: url("/images/slider-shape-3-1.png");
                             background-position: center;
                             background-size: cover;
                             background-repeat: no-repeat;
@@ -299,7 +283,7 @@
                                 height: 45px;
                                 line-height: 45px;
                                 width: 50px;
-                                color: var(--tp-common-white);
+                                color: var(--text-color2);
                                 display: inline-block;
                                 text-align: center;
                                 border-radius: 10px;
@@ -317,7 +301,7 @@
                                     }
 
                                     &:hover {
-                                        color: var(--tp-theme-1);
+                                        color: var(--primary-color);
                                         transition: 0.4s ease-in-out;
                                     }
                                 }
@@ -361,8 +345,8 @@
                                 height: 35px;
                                 line-height: 35px;
                                 width: 40px;
-                                background-color: var(--tp-theme-1);
-                                color: var(--tp-common-white);
+                                background-color: var(--text-color2);
+                                color: var(--bg-color);
                                 display: inline-block;
                                 text-align: center;
                                 border-radius: 10px;
